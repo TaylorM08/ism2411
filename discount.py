@@ -3,6 +3,7 @@
 #2. if total > 100 is true when any number greater then 100 is entered, total < 500 is true when any number less than 500 is entered. They are not garunteed to produce the same amount if the amount entered is between 100 and 500. The first statement will produce a discount of 10% while the second statement will produce a discount of 5%.
 #3. Tiered conditional logic is often encountered when shopping online. Typically, the more you spend, the more of a discount you will receive. Knowing how this works in python, I can envision wht is happening behind the scenes when I see different discount levels applied based on the total amount.
 #---Exercise 1---
+# here is a new line
 total = float(input("Enter the total amount: $"))
 
 # Add your if/elif/ else here
