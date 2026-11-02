@@ -13,3 +13,14 @@ Each folder corresponds to one module.
 - 'functions.py/' - Functions: calculate_tax, apply_discount
 - 'README.md/' - Git: first GitHub submission
 
+# ISM2411 Lab 11 — Customer Dictionary & Lookup
+
+**Name:** Your Name Here
+
+## How to Run
+
+From this folder:
+
+```
+python3 customers.py
+```
