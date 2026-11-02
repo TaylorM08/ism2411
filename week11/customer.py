@@ -47,3 +47,24 @@ final_price = purchase * (1 - discount_rate)
 print(f"Tier: {customer['tier']}")
 print(f"Discount rate: {discount_rate*100:.0f}%")
 print(f"Final price: ${final_price:.2f}")
+
+print("---Exercise 6---")
+customers = [
+    {"name": "Bob", "tier": "silver", "ytd_spending": 3200},
+    {"name": "Carol", "tier": "gold", "ytd_spending": 8750},
+    {"name": "David", "tier": "bronze", "ytd_spending": 450},
+]
+
+for record in customers:
+    rate = tier_discounts.get(record["tier"], 0)
+    discount = 300 * rate
+    print(f"{record['name']} ({record['tier']}): ${discount:.2f}")
+
+print("---Exercise 7---")
+catalog = {
+    "Widget A": {"price": 9.99, "stock": 150},
+    "Gadget C": {"price": 49.99, "stock": 8},
+} 
+for name, details in catalog.items():
+    if details["stock"] < 20:
+        print(f"Low stock alert for {name}: only {details['stock']} left!")
