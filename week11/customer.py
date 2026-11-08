@@ -1,3 +1,5 @@
+#1. The difference between using .get() and brackets is that when using .get(), the information you are trying to retrive may not be there and returns none instead of crashing the code. Brackets are for recieving data you know the information of. I would use .get() if i were checking if i had someones information and brackets if i were trying to pull up at a specific location. 
+#2 The summarized dictionary reminds me of a pivot table on excel except python would be much easier to use when having a lot of data due to the reusability of the code.
 print("---Exercise 1---")
 customer = {
     "name": "Alice",
@@ -68,3 +70,19 @@ catalog = {
 for name, details in catalog.items():
     if details["stock"] < 20:
         print(f"Low stock alert for {name}: only {details['stock']} left!")
+
+print("---Exercise 8---")
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200},
+]
+sales_by_region = {}
+for sale in transactions:
+    region = sale["region"]
+    amount = sale["amount"]
+    sales_by_region[region] = sales_by_region.get(region, 0) + amount
+print(sales_by_region)
+
+for region in sorted(sales_by_region):
+    print(f"{region}: ${sales_by_region[region]:.2f}")
